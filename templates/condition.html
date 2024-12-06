@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<body>
+    <center>
+        
+        <!-- <h1>condition</h1>
+        {%  if age > 100 %}
+            <h1>{{age}}</h1>
+        {%   endif %} -->
+    
+        {%  if age > 18 %}
+            <h1>ELIGIBLE FOR VOTING</h1>
+        {%  else %}
+            <h1> NOT ELIGIBLE FOR VOTING</h1>
+        {% endif %}
+
+        {% if score >= 90 %}
+            <h1>Grade A</h1>
+        {% elif score >= 80 %}
+            <h1>Grade B</h1>
+        {% elif score >= 70 %}
+            <h1>Grade C</h1>
+        {% else %}
+            <h1>Grade D</h1>
+        {% endif %} 
+
+        {% if age >= 25 %}
+            {% if income >= 50000 %}
+                <h1>you are eligible for a loan</h1>
+            {% else %}
+                <h1>you income is not sufficient for a loan</h1>
+            {% endif %}
+        {% else %}
+            <h1>Your are not eleigible due to age</h1>
+        {% endif %}
+
+        {% for var in name %}
+            <h1>{{var}}</h1>
+        {%  endfor %}
+
+    </center>
+</body>
+</html>
